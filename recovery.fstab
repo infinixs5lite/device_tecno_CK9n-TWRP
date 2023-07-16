@@ -57,7 +57,6 @@ product             /product         ext4      ro     wait,slotselect,avb,logica
 # Modem
 /md1img		    emmc	/dev/block/by-name/md1img           flags=display="md1img";backup=1;flashimg=1;slotselect
 
-
 # System Control Processor (SCP)
 /scp		    emmc	/dev/block/by-name/scp             flags=display="scp";backup=1;slotselect
 
