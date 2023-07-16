@@ -7,16 +7,19 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit from TECNO-CK9n device
-$(call inherit-product, device/tecno/TECNO-CK9n/device.mk)
+# Inherit from earth device
+$(call inherit-product, device/tecno/CK9n/device.mk)
 
-PRODUCT_DEVICE := TECNO-CK9n
-PRODUCT_NAME := omni_TECNO-CK9n
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+PRODUCT_DEVICE := CK9n
+PRODUCT_NAME := twrp_CK9n
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO CK9n
 PRODUCT_MANUFACTURER := tecno
