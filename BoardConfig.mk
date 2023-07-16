@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/tecno/TECNO-CK9n
+DEVICE_PATH := device/tecno/CK9n
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -84,6 +84,7 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := tecno_dynamic_partitions
 BOARD_TECNO_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext
 BOARD_TECNO_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 9126805504
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6893
@@ -112,3 +113,4 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
+TW_DEVICE_VERSION := Build by NINO
