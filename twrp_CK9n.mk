@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from CK9n device
 $(call inherit-product, device/tecno/CK9n/device.mk)
 
-# Inherit some common TWRP stuff.
+# Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_DEVICE := CK9n
